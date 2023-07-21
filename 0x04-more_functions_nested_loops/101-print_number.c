@@ -14,23 +14,23 @@ int _putchar(char c);
 void print_number(int n)
 {
 
-	unsigned int n1 = 0;
+	unsigned int i = 0;
 
 	if  (n < 0)
 	{
-		n1 = -n;
+		i = -n;
 		_putchar('-');
 	}
 
 	else
 	{
-		n1 = n;
+		i = n;
 	}
 
-	if (n1 / 10)
+	if (i / 10)
 	{
-		print_number(n1 / 10);
+		print_number(i / 10);
 	}
 
-	_putchar((n1 % 10) + '0');
+	_putchar((i % 10) + '0');
 }
