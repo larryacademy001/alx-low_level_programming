@@ -21,9 +21,9 @@ void rev_string(char *s)
 
 	while (start < end)
 	{
-		tempStorage = str[start];
-		str[start] = str[end];
-		str[end] = tempStorage;
+		tempStorage = s[start];
+		s[start] = s[end];
+		s[end] = tempStorage;
 		start++;
 		end--;
 	}
