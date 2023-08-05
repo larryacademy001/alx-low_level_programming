@@ -1,17 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - function to print a number, followed by a new line
+ * main - funtion to prints its name, followed by a new line
  * @argc: n args
  * @argv: arr args
  * Return: 0
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
-		printf("%s\n", argv[i]);
+	if (argc > 0)
+		printf("%d\n", argc - 1);
 	return (0);
 }
