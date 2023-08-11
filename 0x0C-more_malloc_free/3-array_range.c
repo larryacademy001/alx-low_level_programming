@@ -1,22 +1,33 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * myarrayay_range - function that creates an myarrayay of integers.
- * @min: minimum number
- * @max: maximum number
- * Return: array
+ * array_range - function that creates an array and fills it from min to max
+ * @min: The minimum value to fill it with
+ * @max: The max to fill with (inclusive)
+ *
+ * Return: int pointer
  */
-int *myarrayay_range(int min, int max)
+
+int *array_range(int min, int max)
 {
-	int *myarray, i = 0, t = min;
+	int *s, *p;
+	int i, size;
 
 	if (min > max)
-		return (0);
-	myarray = malloc((max - min + 1) * sizeof(int));
+		return (NULL);
 
-	if (!myarray)
-		return (0);
-	while (i <= max - min)
-		myarray[i++] = t++;
-	return (myarray);
+	size = 1 + (max - min);
+
+	s = malloc(size * sizeof(int));
+
+	if (s == NULL)
+		return (NULL);
+
+	p = s;
+
+	for (i = min; i <= max; i++)
+		*p++ = i;
+
+	return (s);
 }
