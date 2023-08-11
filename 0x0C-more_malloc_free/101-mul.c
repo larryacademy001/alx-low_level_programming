@@ -3,10 +3,11 @@
 #include <stdlib.h>
 
 /**
- * _strlen - returns the length of a string
+ * _strlen - function to return the length of a string
  * @s: string s
  * Return: length of string
  */
+
 int _strlen(char *s)
 {
 	char *p = s;
@@ -17,7 +18,7 @@ int _strlen(char *s)
 }
 
 /**
- * _memset - fills memory with a constant byte.
+ * _memset -function to fill memory with a constant byte.
  * @s: the memory area to be filled
  * @b: the constant byte
  * @n: number of bytes to fill with char b
@@ -35,7 +36,7 @@ char *_memset(char *s, char b, unsigned int n)
 }
 
 /**
- * _calloc - allocates memory for an array
+ * _calloc - function to allocate memory for an array
  * @nmemb: number of elements
  * @size: of each element
  * Return: void *
@@ -58,7 +59,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 }
 
 /**
- *_puts - prints a string, followed by a new line, to stdout.
+ *_puts - function to print a string, followed by a new line, to stdout.
  * @str: the input string
  * Return: nothing to return.
  */
@@ -74,7 +75,7 @@ void _puts(char *str)
 }
 
 /**
- * strNumbers - determines if string has only numbers
+ * strNumbers - function to determine if string has only numbers
  * @str: input string
  * Return: 0 if false, 1 if true
  */
@@ -91,7 +92,8 @@ int strNumbers(char *str)
 }
 
 /**
- * multiply - multiplies two numbers (in string), and prints the result.
+ * multiply - function to multiplie two numbers (in string),
+ * and prints the result.
  * @n1: first number
  * @n2: second number
  * Return: void
@@ -141,7 +143,7 @@ void multiply(char *n1, char *n2)
 }
 
 /**
- * main - adds positive numbers.
+ * main - function to add  positive numbers.
  * @argc: the number of arguments
  * @argv: the arguments
  *
