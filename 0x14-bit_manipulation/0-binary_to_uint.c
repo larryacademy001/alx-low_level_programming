@@ -7,7 +7,7 @@
  * Return: the converted number, or 0
  */
 
-unsigned int binary_to_con_numnt(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
 	unsigned int con_num;
 	int char_len, num_base_2;
