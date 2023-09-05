@@ -201,15 +201,14 @@ int check_elf(char *ptr)
 }
 
 /**
- * main - program that displays the information contained in
- * the ELF header at the start of an ELF file.
+ * main - check the code for Holberton School students.
  * @argc: number of arguments.
  * @argv: arguments vector.
- * Return: 0.
+ * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
-	int fileDesc, readFile;
+	int fd, ret_read;
 	char ptr[27];
 
 	if (argc != 2)
@@ -218,18 +217,18 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	fileDesc = open(argv[1], O_RDONLY);
+	fd = open(argv[1], O_RDONLY);
 
-	if (fileDesc < 0)
+	if (fd < 0)
 	{
 		dprintf(STDERR_FILENO, "Err: file can not be open\n");
 		exit(98);
 	}
 
-	lseek(fileDesc, 0, SEEK_SET);
-	readFile = read(fileDesc, ptr, 27);
+	lseek(fd, 0, SEEK_SET);
+	ret_read = read(fd, ptr, 27);
 
-	if (readFile == -1)
+	if (ret_read == -1)
 	{
 		dprintf(STDERR_FILENO, "Err: The file can not be read\n");
 		exit(98);
@@ -242,7 +241,7 @@ int main(int argc, char *argv[])
 	}
 
 	check_sys(ptr);
-	close(fileDesc);
+	close(fd);
 
 	return (0);
 }
