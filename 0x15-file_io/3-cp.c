@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 
 	buff = create_buff(argv[2]);
 	fileFrom = open(argv[1], O_RDONLY);
-	r = read(fileFrom, buff, 1024);
+	readFile = read(fileFrom, buff, 1024);
 	fileTo = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
