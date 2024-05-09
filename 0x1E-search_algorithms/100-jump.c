@@ -6,7 +6,7 @@
  * a sorted array of integers using the Jump search
  * algorithm
  *
- * 
+ *
  * @array: pointer to the first element of the array
  * to search in
  * @size: number of elements in array
@@ -15,13 +15,13 @@
  */
 int jump_search(int *array, size_t size, int value)
 {
-	int index, jump_size, counter , prev_index;
+	int index, jump_size, counter, prev_index;
 
 	if (array == NULL || size == 0)
 		return (-1);
 
 	jump_size = (int)sqrt((double)size);
-	counter  = 0;
+	counter = 0;
 	prev_index = index = 0;
 
 	do {
@@ -29,7 +29,7 @@ int jump_search(int *array, size_t size, int value)
 
 		if (array[index] == value)
 			return (index);
-		counter ++;
+		counter++;
 		prev_index = index;
 		index = counter * jump_size;
 	} while (index < (int)size && array[index] < value);
