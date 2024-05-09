@@ -52,9 +52,6 @@ int new_binary_search(int *array, size_t left, size_t right, int value)
  *
  * Return: If the value is not present or the array is NULL, -1.
  *         Otherwise, the index where the value is located.
- *
- * Description: Every time you split the array, you have to
- * print the new array (or subarray) you’re searching in
  */
 int exponential_search(int *array, size_t size, int value)
 {
