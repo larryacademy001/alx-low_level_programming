@@ -5,7 +5,7 @@
  * jump_list - function that searches for a value in a
  * sorted list of integers using the Jump search algorithm.
  *
- * 
+ *
  * @list: pointer to the head of the list to search in
  * @size: the number of elements in array
  * @value: the value to search for
@@ -41,9 +41,11 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	printf("Value found between indexes ");
 	printf("[%d] and [%d]\n", (int)prev_node->index, (int)list->index);
 
-	for (; prev_node && prev_node->index <= list->index; prev_node = prev_node->next)
+	for (; prev_node && prev_node->index <= list->index; prev_node = 
+		prev_node->next)
 	{
-		printf("Value checked at index [%d] = [%d]\n", (int)prev_node->index, prev_node->n);
+		printf("Value checked at index [%d] = 
+			[%d]\n", (int)prev_node->index, prev_node->n);
 		if (prev_node->n == value)
 			return (prev_node);
 	}
