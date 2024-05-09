@@ -4,8 +4,8 @@
  * new_binary_search - function that searches for a
  * value in a sorted array of integers using the
  * Interpolation search algorithm
- * 
- * 
+ *
+ *
  * @array: pointer to the first element of the array
  * to search in
  * @left: left index.
@@ -43,21 +43,21 @@ int new_binary_search(int *array, size_t left, size_t right, int value)
 }
 
 /**
-  * exponential_search - function that searches for a value in a
-  * sorted array of integers using the Exponential search algorithm
-  * 
-  * 
+ * exponential_search - function that searches for a value in a
+ * sorted array of integers using the Exponential search algorithm
+ *
+ *
  * @array: pointer to the first element of the array
  * to search in
  * @size: number of elements in array
  * @value: value to search for
-  *
-  * Return: If the value is not present or the array is NULL, -1.
-  *         Otherwise, the index where the value is located.
-  *
-  * Description: Every time you split the array, you have to
-  * print the new array (or subarray) you’re searching in 
-  */
+ *
+ * Return: If the value is not present or the array is NULL, -1.
+ *         Otherwise, the index where the value is located.
+ *
+ * Description: Every time you split the array, you have to
+ * print the new array (or subarray) you’re searching in
+ */
 int exponential_search(int *array, size_t size, int value)
 {
 	size_t index = 0, right;
