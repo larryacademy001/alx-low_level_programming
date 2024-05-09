@@ -13,8 +13,6 @@
  * @value: value to search for
  *
  * Return: the index of the target value if found, otherwise -1.
- *
- * Description: Prints the [sub]array being searched after each change.
  */
 int new_binary_search(int *array, size_t left, size_t right, int value)
 {
